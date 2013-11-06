@@ -2,10 +2,10 @@
   "name": "mobile",
   "version": "0.0.1",
   "description": "Rpi code for mobile illegitime",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Xavier Seignard <xavier.seignard@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "~0.3.0",
+    "midi": "~0.7.0"
+  }
 }
