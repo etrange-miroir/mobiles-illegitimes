@@ -1,0 +1,13 @@
+{
+  "name": "mobileServer",
+  "version": "0.0.1",
+  "description": "Server code for mobile illegitime",
+  "author": "Xavier Seignard <xavier.seignard@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "~0.3.0",
+    "midi": "~0.7.0",
+    "serialport": "~1.2.4",
+    "xbee-api": "~0.3.2"
+  }
+}
