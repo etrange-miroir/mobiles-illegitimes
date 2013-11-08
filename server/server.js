@@ -7,7 +7,7 @@ var xbeeAPI = new xbee_api.XBeeAPI({
   api_mode: 2
 });
 
-var serialPort = new SerialPort('/dev/ttyUSB3', {
+var serialPort = new SerialPort('/dev/ttyUSB0', {
   parser: xbeeAPI.rawParser()
 });
 
@@ -16,7 +16,7 @@ serialPort.on('open', function() {
 });
 
 var processMessage = function(msg) {
-	var furnitureNumber = msg.substr(msg.lastIndexOf('i') + 1, msg.lastIndexOf('i') + 2);
+	var furnitureNumber = msg.substring(msg.lastIndexOf('i') + 1, msg.lastIndexOf('i') + 2);
 
 	if (msg.indexOf('connect') > -1) {
 		console.log(chalk.blue('[INFO] Meuble ' + furnitureNumber + ' connecté'));
@@ -26,7 +26,7 @@ var processMessage = function(msg) {
 		console.log(chalk.green.bold('[NOTE] Meuble ' + furnitureNumber + ' : porte close, note midi:' + note));
 	}
 	else {
-		var door = msg.substr(msg.lastIndexOf('#') + 1, msg.length);
+		var door = msg.substring(msg.lastIndexOf('#') + 1, msg.length);
 		var note = parseInt(furnitureNumber, 10) * 10 + parseInt(door, 10);
 		console.log(chalk.green.bold('[NOTE] Meuble ' + furnitureNumber + ' : porte ' + door + ', note midi:' + note));
 	}
