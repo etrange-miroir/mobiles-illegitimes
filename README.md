@@ -22,3 +22,7 @@ ATAP2    // mode API
 ATWR     // sauvegarde la conf
 ATCN     // quitte le mode conf
 ```
+
+## Cartes SD
+
+En config Xbee + régie : cartes SD bleues sans etiquettes, numérotées comme les meubles
